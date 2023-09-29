@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="top">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+      <div class="bottom">
+        <div class="pageviews__price">
+          <p class="pageviews__display">
+            <span id="pageviews-display">100K</span> PAGEVIEWS
+          </p>
+          <input
+            type="range"
+            min="1"
+            max="5"
+            value="3"
+            class="slider"
+            id="price-slider"
+          />
+          <p class="price__display">
+            <span id="price-display">$16.00</span> / month
+          </p>
+        </div>
+        <div class="billing">
+          <span>Monthly Billing</span>
+          <label class="switch">
+            <input type="checkbox" id="discount-toggle" />
+            <span class="slider round"></span>
+          </label>
+          <span>Yearly Billing</span>
+          <span class="discount">25% discount</span>
+        </div>
+        <div class="features__submit">
+          <div class="features">
+            <div class="feature">
+              <img src="./images/icon-check.svg" alt="checkmark" />
+              <span>Unlimited websites</span>
+            </div>
+            <div class="feature">
+              <img src="./images/icon-check.svg" alt="checkmark" />
+              <span>100% data ownership</span>
+            </div>
+            <div class="feature">
+              <img src="./images/icon-check.svg" alt="checkmark" />
+              <span>Email reports</span>
+            </div>
+          </div>
+          <div class="submit">
+            <button>Start my trial</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Sean Cravener</a>.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

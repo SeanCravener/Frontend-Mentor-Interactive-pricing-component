@@ -50,4 +50,37 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  padding: 25px;
+}
+
+.top {
+  margin-bottom: 50px;
+  text-align: center;
+  background-image: url("/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 145px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    margin-bottom: 20px;
+  }
+
+  & :nth-child(2) {
+    margin-bottom: 5px;
+  }
+}
+
+.bottom {
+  text-align: center;
+  gap: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 450px;
 }

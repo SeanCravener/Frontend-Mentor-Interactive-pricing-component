@@ -25,52 +25,49 @@
     <section class="container">
       <div class="top">
         <h1>Simple, traffic-based pricing</h1>
-        <p>Sign-up for our 30-day trial. No credit card required.</p>
+        <p>Sign-up for our 30-day trial.</p>
+        <p>No credit card required.</p>
       </div>
       <div class="bottom">
-        <div class="pageviews__price">
-          <p class="pageviews__display">
-            <span id="pageviews-display">100K</span> PAGEVIEWS
-          </p>
-          <input
-            type="range"
-            min="1"
-            max="5"
-            value="3"
-            class="slider"
-            id="price-slider"
-          />
-          <p class="price__display">
-            <span id="price-display">$16.00</span> / month
-          </p>
-        </div>
-        <div class="billing">
+        <p class="pageviews__display">
+          <span id="pageviews-display">100K</span> PAGEVIEWS
+        </p>
+        <input
+          type="range"
+          min="1"
+          max="5"
+          value="3"
+          class="slider"
+          id="price-slider"
+        />
+        <p class="price__display">
+          $<span id="price-display">16.00</span> / month
+        </p>
+        <div class="billing__discount">
           <span>Monthly Billing</span>
           <label class="switch">
             <input type="checkbox" id="discount-toggle" />
             <span class="slider round"></span>
           </label>
           <span>Yearly Billing</span>
-          <span class="discount">25% discount</span>
+          <span class="discount">25%</span>
         </div>
-        <div class="features__submit">
-          <div class="features">
-            <div class="feature">
-              <img src="./images/icon-check.svg" alt="checkmark" />
-              <span>Unlimited websites</span>
-            </div>
-            <div class="feature">
-              <img src="./images/icon-check.svg" alt="checkmark" />
-              <span>100% data ownership</span>
-            </div>
-            <div class="feature">
-              <img src="./images/icon-check.svg" alt="checkmark" />
-              <span>Email reports</span>
-            </div>
+        <div class="features">
+          <div class="feature">
+            <img src="./images/icon-check.svg" alt="checkmark" />
+            <span>Unlimited websites</span>
           </div>
-          <div class="submit">
-            <button>Start my trial</button>
+          <div class="feature">
+            <img src="./images/icon-check.svg" alt="checkmark" />
+            <span>100% data ownership</span>
           </div>
+          <div class="feature">
+            <img src="./images/icon-check.svg" alt="checkmark" />
+            <span>Email reports</span>
+          </div>
+        </div>
+        <div class="submit">
+          <button>Start my trial</button>
         </div>
       </div>
     </section>

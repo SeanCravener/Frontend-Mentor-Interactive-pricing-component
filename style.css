@@ -114,3 +114,27 @@ body {
     font-weight: var(--font-weight-bold);
   }
 }
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 16px;
+  height: 8px;
+  background-color: var(--light-gray-blue);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background-color: var(--strong-cyan);
+  border-radius: 50%;
+  background-image: url("/images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 15px 25px var(--soft-cyan);
+}

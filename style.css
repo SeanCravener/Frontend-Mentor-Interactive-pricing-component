@@ -6,10 +6,10 @@
   --font-weight: 600;
   --font-weight-bold: 800;
   --font-size: 15px;
-  --font-size-small: 0.875rem;
+  --font-size-small: 0.82rem;
   --font-size-medium: 1rem;
   --font-size-large: 1.25rem;
-  --font-size-xlarge: 1.5rem;
+  --font-size-xxlarge: 2.25rem;
 
   /* Primary Colors */
   --soft-cyan: hsl(174, 77%, 80%);
@@ -38,7 +38,8 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
-  color: var(--dark-desaturated-blue);
+  color: var(--gray-blue);
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -67,6 +68,13 @@ body {
 
   & h1 {
     margin-bottom: 20px;
+    font-size: var(--font-size-large);
+    color: black;
+    font-weight: var(--font-weight);
+  }
+
+  & p {
+    font-size: var(--font-size-small);
   }
 
   & :nth-child(2) {
@@ -75,6 +83,7 @@ body {
 }
 
 .bottom {
+  font-size: var(--font-size-medium);
   text-align: center;
   gap: 20px 0px;
   display: flex;
@@ -83,4 +92,25 @@ body {
   background-color: var(--white);
   width: 100%;
   max-width: 450px;
+  border-radius: 10px;
+  box-shadow: 1px 10px 50px var(--light-gray-blue-2);
+}
+
+.pageviews__display {
+  letter-spacing: 2.5px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+}
+
+.price__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & span {
+    margin-right: 10px;
+    font-size: var(--font-size-xxlarge);
+    color: black;
+    font-weight: var(--font-weight-bold);
+  }
 }

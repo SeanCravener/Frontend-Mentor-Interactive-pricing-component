@@ -7,19 +7,19 @@ const pageviewsDisplay = document.getElementById("pageviews-display");
 // Object containing pageviews and prices
 const pageviewsPrices = {
   1: {
-    pageviews: "10k",
+    pageviews: "10K",
     price: 8,
   },
   2: {
-    pageviews: "50k",
+    pageviews: "50K",
     price: 12,
   },
   3: {
-    pageviews: "100k",
+    pageviews: "100K",
     price: 16,
   },
   4: {
-    pageviews: "500k",
+    pageviews: "500K",
     price: 24,
   },
   5: {
@@ -31,7 +31,8 @@ const pageviewsPrices = {
 // Sets the display to the correct values
 const setDisplay = (value) => {
   let content = pageviewsPrices[value];
-  priceDisplay.innerHTML = content.price - content.price * discount();
+  priceDisplay.innerHTML =
+    "$" + (content.price - content.price * discount()).toFixed(2);
   pageviewsDisplay.innerHTML = content.pageviews;
 };
 

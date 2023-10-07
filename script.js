@@ -6,23 +6,23 @@ const pageviewsDisplay = document.getElementById("pageviews-display");
 
 // Object containing pageviews and prices
 const pageviewsPrices = {
-  1: {
+  0: {
     pageviews: "10K",
     price: 8,
   },
-  2: {
+  25: {
     pageviews: "50K",
     price: 12,
   },
-  3: {
+  50: {
     pageviews: "100K",
     price: 16,
   },
-  4: {
+  75: {
     pageviews: "500K",
     price: 24,
   },
-  5: {
+  100: {
     pageviews: "1M",
     price: 36,
   },
@@ -41,7 +41,9 @@ const discount = () => (toggle.checked ? 0.25 : 0);
 
 // Event listeners
 slider.oninput = () => {
+  const value = slider.value;
   setDisplay(slider.value);
+  slider.style.background = `linear-gradient(to right, var(--soft-cyan) ${value}%, var(--light-gray-blue) ${value}%)`;
 };
 
 toggle.onclick = () => {
@@ -50,3 +52,5 @@ toggle.onclick = () => {
 
 // Initial display
 setDisplay(slider.value);
+
+//

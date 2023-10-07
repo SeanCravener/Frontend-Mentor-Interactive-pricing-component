@@ -55,7 +55,8 @@ section {
   padding: 25px;
   background-image: url("images/bg-pattern.svg");
   background-repeat: no-repeat;
-  background-position: left top 3px;
+  background-position: left top;
+  background-size: auto;
 }
 
 .header {

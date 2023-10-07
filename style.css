@@ -9,7 +9,7 @@
   --font-size-x-small: 0.75rem;
   --font-size-small: 0.85rem;
   --font-size-medium: 1rem;
-  --font-size-large: 1.25rem;
+  --font-size-large: 1.5rem;
   --font-size-xxlarge: 2.25rem;
 
   /* Primary Colors */
@@ -53,6 +53,9 @@ section {
   justify-content: center;
   height: 100%;
   padding: 25px;
+  background-image: url("/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: left top 3px;
 }
 
 .header {
@@ -66,21 +69,20 @@ section {
   justify-content: center;
   display: flex;
   flex-direction: column;
+}
 
-  & h1 {
-    margin-bottom: 20px;
-    font-size: var(--font-size-large);
-    color: black;
-    font-weight: var(--font-weight);
-  }
+h1 {
+  margin-bottom: 10px;
+  font-size: var(--font-size-large);
+  color: black;
+  font-weight: var(--font-weight-bold);
+}
 
-  & p {
-    font-size: var(--font-size-small);
-  }
-
-  & :nth-child(2) {
-    margin-bottom: 5px;
-  }
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: var(--font-size-small);
 }
 
 .container {
@@ -100,12 +102,13 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 30px;
+  margin: 25px 30px 35px 30px;
+  gap: 40px;
 }
 
 .pageviews__display {
   order: 1;
-  margin: 15px auto;
+
   letter-spacing: 2.5px;
   font-size: var(--font-size-x-small);
   font-weight: var(--font-weight-bold);
@@ -115,7 +118,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
   order: 3;
 
   & span {
@@ -139,7 +141,6 @@ input[type="range"] {
     var(--soft-cyan) 50%,
     var(--light-gray-blue) 50%
   );
-  margin: 20px 25px;
   order: 2;
   width: 100%;
 }
@@ -155,6 +156,27 @@ input[type="range"]::-webkit-slider-thumb {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0px 17px 20px var(--soft-cyan);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: var(--soft-cyan);
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background-color: var(--strong-cyan);
+  border-radius: 50%;
+  background-image: url("/images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 17px 20px var(--soft-cyan);
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background-color: var(--soft-cyan);
 }
 
 .switch {
@@ -181,6 +203,10 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: var(--light-gray-blue-2);
   -webkit-transition: 0.4x;
   transition: 0.4s;
+
+  &:hover {
+    background-color: var(--soft-cyan);
+  }
 }
 
 .slider:before {
@@ -218,8 +244,12 @@ input:checked + .slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
-  margin-bottom: 40px;
+  margin: 15px 30px 0 30px;
+  padding-bottom: 45px;
+}
+
+.divider {
+  border-bottom: 2px solid var(--light-gray-blue);
 }
 
 .discount {
@@ -233,7 +263,6 @@ input:checked + .slider:before {
 }
 
 .bottom {
-  border-top: 2px solid var(--light-gray-blue);
   padding-top: 25px;
 }
 
@@ -242,11 +271,12 @@ input:checked + .slider:before {
   font-size: var(--font-size-small);
 
   & span:last-child {
-    margin-left: 25px;
+    margin-left: 15px;
   }
 }
 
 .submit button {
+  border: none;
   background-color: var(--dark-desaturated-blue);
   color: var(--light-gray-blue-2);
   padding: 15px 50px;
@@ -254,32 +284,43 @@ input:checked + .slider:before {
   border-radius: 25px;
   letter-spacing: 0.75px;
   font-weight: var(--font-weight-bold);
+
+  &:hover {
+    color: var(--light-gray-blue);
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 500px) {
   .container {
-    max-width: 600px;
+    max-width: 575px;
+  }
+
+  .subtitle {
+    flex-direction: row;
+    justify-content: center;
   }
 
   .top {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .bottom {
     display: flex;
-    margin: 0 30px;
+    margin: 5px 40px;
   }
 
   input[type="range"] {
     order: 3;
     width: 100%;
-    margin: 15px 0 25px 0;
   }
 
   .price__display {
     order: 2;
-    margin-right: 0px;
+    margin-left: auto;
   }
 
   .pageviews__display {
@@ -292,5 +333,9 @@ input:checked + .slider:before {
 
   .features {
     text-align: left;
+  }
+
+  h1 {
+    font-size: 1.75rem;
   }
 }
